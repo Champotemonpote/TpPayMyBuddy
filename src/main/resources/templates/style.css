@@ -1,0 +1,40 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 35%;
+    margin-right: 35%;
+    border: solid rgb(255, 255, 255);
+    border-radius: 4%;
+    box-shadow: rgb(0, 0, 0) 2px 2px 5px 3px;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+}
+
+.form-control {
+    text-align: center;
+}
+
+#exampleCheck1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 22%;
+    font-weight: bolder;
+}
+
+.form-check-input {
+    margin-right: 2%;
+}
+
+.logo {
+    width: 250px;
+    margin-left: 39%;
+    margin-top: 10%;
+    filter: drop-shadow(0 0 0.15rem rgb(255, 255, 255));
+}
+
+.form-text {
+    text-align: center;
+}
