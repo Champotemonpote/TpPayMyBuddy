@@ -13,6 +13,10 @@ form {
     padding-bottom: 1%;
 }
 
+.registerForm {
+    margin-top: 10%;
+}
+
 .form-control {
     text-align: center;
 }
@@ -28,13 +32,66 @@ form {
     margin-right: 2%;
 }
 
-.logo {
-    width: 250px;
-    margin-left: 39%;
-    margin-top: 10%;
+.logoNavBar {
+    width: 200px;
     filter: drop-shadow(0 0 0.15rem rgb(255, 255, 255));
 }
 
 .form-text {
     text-align: center;
+}
+
+button.btn.btn-primary {
+    background-color: rgb(79, 185, 252);
+    border-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 0.15rem rgb(255, 255, 255));
+}
+
+.d-flex {
+    background-color: rgb(135, 206, 250);
+    margin-right: 10%;
+}
+
+.btn.btn-outline-light {
+    background-color: rgb(79, 185, 252);
+    border-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 0.15rem rgb(255, 255, 255));
+}
+
+.btn-outline-light:hover {
+    color: rgb(79, 185, 252) !important;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+}
+
+.newMember {
+    color: rgb(13, 110, 253);
+    text-align: center;
+    font-size: small;
+}
+
+.newMember:hover {
+    color: rgb(255, 255, 255);
+}
+
+button.btn.btn-primary:hover {
+    color: rgb(79, 185, 252) !important;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+}
+
+.homePage {
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+    text-align: center;
+    text-shadow: black 2px 2px 2px;
+    border: solid rgb(255, 255, 255);
+    border-radius: 30%;
+    box-shadow: rgb(0 0 0) 2px 2px 5px 3px;
+    background-color: rgb(79, 185, 252);
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 12%;
 }
