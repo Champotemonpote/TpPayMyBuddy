@@ -12,7 +12,7 @@
 	<artifactId>tp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tp</name>
-	<description>Tp PayMyBuddy</description>
+	<description>Tp PayMyBuddy App to transfer cash between people</description>
 	<properties>
 		<java.version>16</java.version>
 	</properties>
