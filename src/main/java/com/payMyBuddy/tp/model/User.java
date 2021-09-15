@@ -3,8 +3,8 @@ package com.payMyBuddy.tp.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.sql.Connection;
 import java.util.List;
+
 
 @Data
 @Entity
@@ -25,5 +25,6 @@ public class User {
     private List<Connection> connections;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Account account;
+
 
 }
