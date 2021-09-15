@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!--RegisterForm-->
-                        <form class="registerForm" th:action="@{/Register}" method="POST">
+                        <form:form action="registration" method="post" modelAttribute="registrationForm" class="registerForm">
                             <div class="mb-3">
                                 <input type="firstName" class="form-control" id="exampleInputFistName1" placeholder="FirstName" />
                             </div>
@@ -63,7 +63,7 @@
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" aria-describedby="passwordRules" />
                             </div>
                             <button type="submit" class="btn btn-primary">I WANT TO BE A NEW BUDDY !</button>
-                        </form>
+                        </form:form>
                     </div>
                 </div>
                 <div class="rowVide">

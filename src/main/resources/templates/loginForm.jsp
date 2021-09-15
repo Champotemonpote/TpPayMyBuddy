@@ -2,13 +2,13 @@
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
         <!DOCTYPE html>
-        <html xmlns:th="http://www.thymeLeaf.org">
 
         <head>
-            <meta charset="UTF-8" />
+            <meta charset="UTF-8">
             <link href="style.css" rel="stylesheet">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-            <title>Log In PayMyBuddy</title>
+            <title>Log In PayMyBuddy
+                <title>
         </head>
 
         <body style="background-color: rgb(135, 206, 250);">
@@ -48,7 +48,7 @@
                             </div>
                         </nav>
                         <!--LoginForm-->
-                        <form class="registerForm" th:action="@{/Login}" method="POST">
+                        <form:form action="registration" method="post" modelAttribute="registrationForm" class="registerForm">
                             <div class="mb-3">
                                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp" />
                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
@@ -64,7 +64,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Login</button>
                             <a class="newMember" href="registerForm.html">Do you want to create a new account? Join the Buddy Team!</a>
-                        </form>
+                        </form:form>
                     </div>
                 </div>
                 <div class="rowVide">
