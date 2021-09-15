@@ -33,12 +33,12 @@ public class UserController {
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public ModelAndView processRequest(@ModelAttribute("registerForm") RegisterForm form) {
         userService.register(form);
-        return new ModelAndView("login", "loginForm", new LoginForm());
+        return new ModelAndView("loginForm", "login", new LoginForm());
     }
 
-    @GetMapping("/register")
+    @GetMapping("/registerForm")
     public ModelAndView showRegisterForm() {
-        return new ModelAndView("register", "registerForm", new RegisterForm());
+        return new ModelAndView("registerForm", "register", new RegisterForm());
     }
 }
 

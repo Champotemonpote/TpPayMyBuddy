@@ -3,11 +3,12 @@ spring:
 
   application:
     name: pay-my-buddy
-    #H2 Configuration
+
+  #H2 Configuration
     h2.console.enabled: true
   mvc:
     view:
-      prefix: /WEB-INF/jsp/
+      prefix: /templates/
       suffix: .jsp
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -15,7 +16,7 @@ spring:
     username: root
     password: Ch@mpote84
   jpa:
-    hibernate.ddl-auto: create-drop
+    hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
 

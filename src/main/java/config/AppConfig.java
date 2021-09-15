@@ -27,7 +27,7 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
                 .authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/loginForm")
+                .loginPage("/login")
                 .defaultSuccessUrl("/", true)
                 .and()
                 .httpBasic()
