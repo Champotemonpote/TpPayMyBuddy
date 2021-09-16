@@ -8,7 +8,7 @@ spring:
     h2.console.enabled: true
   mvc:
     view:
-      prefix: /templates/
+      prefix: /WEB-INF/jsp/
       suffix: .jsp
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
