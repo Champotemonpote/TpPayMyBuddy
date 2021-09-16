@@ -5,10 +5,7 @@ import com.payMyBuddy.tp.service.form.LoginForm;
 import com.payMyBuddy.tp.service.form.RegisterForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -21,25 +18,28 @@ public class UserController {
         this.userService = userService;
     }
 
-
     @GetMapping("/")
     public ModelAndView home(Model model) {
-
-
         return new ModelAndView("transfer");
     }
 
-
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public ModelAndView processRequest(@ModelAttribute("registerForm") RegisterForm form) {
-        userService.register(form);
-        return new ModelAndView("loginForm", "login", new LoginForm());
+    @GetMapping("/login")
+    public ModelAndView showLoginForm() {
+        return new ModelAndView("login", "loginForm", new RegisterForm());
     }
 
     @GetMapping("/register")
     public ModelAndView showRegisterForm() {
-        return new ModelAndView("registerForm", "register", new RegisterForm());
+        return new ModelAndView("register", "registerForm", new RegisterForm());
+    }
+
+
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public ModelAndView processRequest(@ModelAttribute("registrationForm") RegisterForm form) {
+        userService.register(form);
+        return new ModelAndView("login", "loginForm", new LoginForm());
     }
 }
+
 
 

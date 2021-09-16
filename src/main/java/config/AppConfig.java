@@ -21,7 +21,7 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/style.css", "/registerForm", "/loginForm", "/register")
+                .antMatchers( "/style.css", "/register", "/", "/register", "/login", "/homePage", "/img/*")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -33,6 +33,5 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                 .and()
                 .rememberMe();
-
     }
 }
