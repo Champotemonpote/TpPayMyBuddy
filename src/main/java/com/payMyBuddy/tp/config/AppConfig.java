@@ -1,4 +1,4 @@
-package config;
+package com.payMyBuddy.tp.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers( "/style.css", "/register", "/", "/register", "/login", "/homePage", "/img/*")
+                .antMatchers( "/style.css", "/register","/signin", "/", "/login", "/home-page", "/img/*")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

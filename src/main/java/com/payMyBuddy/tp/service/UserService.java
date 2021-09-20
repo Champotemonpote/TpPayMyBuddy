@@ -11,18 +11,8 @@ import org.springframework.stereotype.Service;
 
 @Service("UserService")
 public class UserService {
-
-    PasswordEncoder passwordEncoder = new PasswordEncoder() {
-        @Override
-        public String encode(CharSequence charSequence) {
-            return null;
-        }
-
-        @Override
-        public boolean matches(CharSequence charSequence, String s) {
-            return false;
-        }
-    };
+    @Autowired
+    PasswordEncoder passwordEncoder;
     @Autowired
     private UserRepository userRepository;
     @Autowired

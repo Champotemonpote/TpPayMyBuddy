@@ -20,13 +20,10 @@ public class UserController {
 
     @GetMapping("/")
     public ModelAndView home(Model model) {
-        return new ModelAndView("transfer");
+        return new ModelAndView("home-page");
     }
 
-    @GetMapping("/login")
-    public ModelAndView showLoginForm() {
-        return new ModelAndView("login", "loginForm", new RegisterForm());
-    }
+
 
     @GetMapping("/register")
     public ModelAndView showRegisterForm() {
@@ -34,8 +31,8 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public ModelAndView processRequest(@ModelAttribute("registrationForm") RegisterForm form) {
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public ModelAndView processRequest(@ModelAttribute("registerForm") RegisterForm form) {
         userService.register(form);
         return new ModelAndView("login", "loginForm", new LoginForm());
     }
