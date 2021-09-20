@@ -1,67 +1,78 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-  <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-    <!doctype html>
-    <html lang="en">
+            <!DOCTYPE html>
 
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-      <meta name="generator" content="Hugo 0.82.0">
-      <title>Signin Template · Bootstrap v5.0</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
-      <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link href="style.css" rel="stylesheet">
-    </head>
+            <head>
+                <meta charset="UTF-8">
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+                <link href="style.css" rel="stylesheet">
+                <title>Register PayMyBuddy</title>
+            </head>
 
-    <body class="text-center">
-      <div class="container">
-        <main class="form-signin">
-          <div id="addUser">
-            <h4 class="logo">Pay My Budy</h4>
-            </br>
-            <form:form action="register" method="post" modelAttribute="registerForm">
+            <body style="background-color: rgb(135, 206, 250); ">
+                <div class="container ">
+                    <div class="rowNavBar ">
+                        <div class="col-xs-12 ">
+                            <!--NavBar-->
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+                                <div class="container-fluid ">
+                                    <a class="navbar-brand "><img class="logoNavBar" src="logo_transparent.png" alt="Logo Pay My Buddy"></a>
+                                    <button class="navbar-toggler " type="button " data-bs-toggle="collapse " data-bs-target="#navbarColor02 " aria-controls="navbarColor02 " aria-expanded="false " aria-label="Toggle navigation ">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                                    <div class="collapse navbar-collapse " id="navbarColor02 ">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                            <li class="nav-item ">
+                                                <a class="nav-link active " aria-current="page " href="homePage.jsp ">Home</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link " href="# ">FriendList</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link " href="# ">Accompt</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link " href="loginForm.jsp ">Login</a>
+                                            </li>
+                                        </ul>
+                                        <form class="d-flex ">
+                                            <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
+                                            <button class="btn btn-outline-light " type="submit ">Search Friends</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-12 ">
+                            <!--RegisterForm-->
+                            <form:form action="register" method="post" modelAttribute="registerForm" class="registerForm ">
+                                <div class="mb-3 ">
+                                    <form:input path="firstName" type="text" class="form-control " id="exampleInputFistName1 " placeholder="FirstName " />
+                                </div>
+                                <div class="mb-3 ">
+                                    <form:input path="lastName" type="text" class="form-control " id="exampleInputLastName1 " placeholder="LastName " />
+                                </div>
+                                <div class="mb-3 ">
+                                    <form:input path="email" type="email" class="form-control " id="exampleInputEmail1 " placeholder="Email " aria-describedby="emailHelp " />
+                                </div>
+                                <div class="mb-3 ">
+                                    <form:input path="password" type="password" class="form-control " id="exampleInputPassword1 " placeholder="Password " aria-describedby="passwordRules " />
+                                </div>
+                                <div class="mb-3 ">
+                                    <form:input path="confirmPassword" type="password" class="form-control " id="exampleInputPassword1 " placeholder="Confirm Password " aria-describedby="passwordRules " />
+                                </div>
+                                <form:button type="submit " class="btn btn-primary ">I WANT TO BE A NEW BUDDY !</form:button>
+                            </form:form>
+                        </div>
+                    </div>
+                    <div class="rowVide ">
+                        <div class="col-xs-12 "></div>
+                    </div>
+                </div>
+            </body>
 
-              <h1 class="h3 mb-3 fw-normal">Register</h1>
-              <div class="form-floating">
-                <form:input path="firstName" type="text" class="form-control floatingInput" />
-                <label for="floatingInput">First Name</label>
-              </div>
-              <div class="form-floating">
-                <form:input path="lastName" type="text" class="form-control floatingInput" />
-                <label for="floatingInput">Last Name</label>
-              </div>
-              <div class="form-floating">
-                <form:input path="email" type="email" class="form-control floatingInput" />
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating">
-                <form:input path="password" type="password" class="form-control floatingPassword" />
-                <label for="floatingPassword">Password</label>
-              </div>
-              <div class="form-floating">
-                <form:input path="confirmPassword" type="password" class="form-control floatingPassword" />
-                <label for="floatingPassword">Confirm Password</label>
-              </div>
-
-              <div class="checkbox mb-3">
-                <label>
-                  <input type="checkbox" value="remember-me"> Remember me
-                </label>
-              </div>
-              <form:button class="w-100 btn btn-lg btn-primary" type="submit">Register</form:button>
-              <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-            </form:form>
-          </div>
-        </main>
-      </div>
-
-
-
-    </body>
-
-    </html>
+            </html>
